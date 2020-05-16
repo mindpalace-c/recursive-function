@@ -1,0 +1,38 @@
+#include <iostream>
+#include <cmath>                          //pre-defined functions 
+using namespace std;
+int main() 
+{   int a,b,c,disc;
+    float p,q;
+      cout<<"ENTER THE THREE CO-EFFICIENT\n";
+	cout<<"THE PROGRAM WILL TELL YOU THE ROOTS OF QUADRATIC EQUATION\n";
+	cin>>a>>b>>c;
+/*-------------------------------------------------------------------------- 
+we have an equation b^2-4*a*c
+which will tell us either the solution is imaginary,real,equal, let’s see 
+---------------------------------------------------------------------------*/
+	disc=b*b-4*a*c;
+		if (disc<0)                             // negative number i.e. means imaginary in sqrt 
+		cout<<"THE ROOTS ARE IMAGINERY\n";
+		if(disc=0)
+		{
+		cout<<"BOTH ROOTS ARE EQUAL\n";
+			p=-b/(2.0*a);                        // here we let 2.0(real constant)
+		cout<<"root is = "<<p<<endl;                                                 
+		}
+		if(disc>0)
+		{
+			cout<<"ROOTS ARE REAL AND DISTINICT\n";
+			p=(-b+sqrt(disc))/(2*a);  
+      // as we know, there are possible two roots in quadratic equation
+			q=(-b-sqrt(disc))/(2*a);
+			cout<<"The roots are = "<<p<<" "<<q<<endl;
+					
+		}
+}
+
+//=========================================================================================================
+//                          ABDUR-REHMAN 
+//                  UNIVERSITY OF LAHORE DEPARTMENT OF ELECTRICAL ENGINEERING
+//=========================================================================================================
+
